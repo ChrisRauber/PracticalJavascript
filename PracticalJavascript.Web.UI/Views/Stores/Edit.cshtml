@@ -35,7 +35,8 @@
     <div class="entry-line">
       @Html.LabelFor(m => m.SalesPersonId)
       @Html.TextBoxFor(m => m.SalesPersonId)
-      <a href="javascript:void(0);" onclick="javascript:pjs.searchSalesPerson();"><img src="@Url.Content("~/Content/images/search_16_h.png")" alt="Search" /></a>
+      <a href="javascript:void(0);" onclick="javascript:pjs.searchSalesPerson();">
+        <img src="@Url.Content("~/Content/images/search_16_h.png")" alt="Search" /></a>
     </div>
     <div class="entry-line">
       @Html.LabelFor(m => m.SalesPerson)
@@ -51,10 +52,12 @@
     <div class="entry-line">
     </div>
   </div>
-  <input type="submit" class="button" value="Save" />
+  <div>
+    <input type="submit" class="button" value="Save" />
+  </div>
+  
 }
 @Html.Action("List", "SalesPersons")
-
 @section Scripts {
   <script type="text/javascript">
     $(document).ready(function () {

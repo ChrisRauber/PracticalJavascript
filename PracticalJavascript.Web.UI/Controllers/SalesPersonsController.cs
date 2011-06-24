@@ -13,7 +13,7 @@ namespace PracticalJavascript.Web.UI.Controllers
 
         public ActionResult List()
         {
-            return PartialView();
+            return PartialView("_List");
         }
 
     }

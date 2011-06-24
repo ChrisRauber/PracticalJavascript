@@ -1,4 +1,4 @@
-﻿(function (p, $) {
+﻿(function (p, $, undefined) {
   var salesPeople;
 
   p.searchSalesPerson = function () {

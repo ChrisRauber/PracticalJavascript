@@ -13,10 +13,10 @@
     }
   }
 
-  function showStores(stores) {
+  function showStores(storesToShow) {
     var trs;
-    if (stores) {
-      trs = $("#storeTemplate").tmpl(stores);
+    if (storesToShow) {
+      trs = $("#storeTemplate").tmpl(storesToShow);
       $("#tbodyStores").html(trs).zebraStripe();
     }
   }

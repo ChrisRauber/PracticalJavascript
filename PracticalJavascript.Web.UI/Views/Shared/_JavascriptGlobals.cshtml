@@ -1,8 +1,8 @@
 ﻿@using PracticalJavascript.Web.UI.Models
 
 <script type="text/javascript">
-  (function(p) {
-    p.rootUrl = '@Url.Content("~")';
+  (function(p, $, undefined) {
+    p.virtualRoot = '@Url.Content("~")';
     
     p.storeType = p.storeType || {};
     
@@ -10,5 +10,5 @@
     p.storeType.maintenance = @((int)StoreType.Maintenance);
     p.storeType.fuelAndMaintenance = @((int)StoreType.FuelAndMaintenance);
 
-  }(window.pjs = window.pjs || {}));
+  }(window.pjs = window.pjs || {}, jQuery));
 </script>

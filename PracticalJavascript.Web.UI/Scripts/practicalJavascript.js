@@ -1,17 +1,16 @@
-﻿(function (p, $) {
+﻿(function (p, $, undefined) {
   p.createUrl = function (url) {
-    return p.rootUrl + url;
+    return p.virtualRoot + url;
   };
 
   p.onPageInit = function () {
-    debug.log("Hello!!!");
     setBodyHeight();
     $(window).resize(function () {
       setBodyHeight();
     });
 
     if (!Modernizr.borderradius) {
-      $(".button").corner();
+      $("#main").corner();
     }
   };
 
