@@ -1,0 +1,75 @@
+﻿@{
+  ViewBag.Title = "Stores";
+}
+<style type="text/css">
+label 
+{
+  float: none;
+  margin-right: 10px;
+}
+</style>
+<h2>
+  Store List</h2>
+<div id="storeTypeSelector">
+  <input id="cboFuel" type="checkbox" name="cboFuelMaintenance" checked="checked" /><label for="cboFuel">Fuel</label>
+  <input id="cboMaintenance" type="checkbox" name="cboFuelMaintenance" checked="checked" /><label for="cboMaintenance">Maintenance</label>
+</div>
+<div class="clear">&nbsp;</div>
+<table>
+  <thead>
+    <tr>
+      <th class="td-store-id">
+        Store ID
+      </th>
+      <th class="td-store-name">
+        Name
+      </th>
+      <th class="td-store-address">
+        Address
+      </th>
+      <th class="td-store-city">
+        City
+      </th>
+      <th class="td-store-state">
+        State
+      </th>
+      <th class="td-store-zipcode">
+        Zip Code
+      </th>
+      <th class="td-store-storetype">
+        Store Type
+      </th>
+      <th class="td-store-salesrep">
+        Sales Rep
+      </th>
+    </tr>
+  </thead>
+  <tbody id="tbodyStores">
+  </tbody>
+</table>
+
+@Html.ActionLink("Create", "Create", null, new { @class = "button" })
+
+<div class="clear"></div>
+
+<script id="storeTemplate" type="text/x-jquery-tmpl">
+  <tr>
+    <td class="td-store-id">${StoreId}</td>
+    <td class="td-store-name">${Name}</td>
+    <td class="td-store-address">${AddressLine1} ${AddressLine2}</td>
+    <td class="td-store-city">${City}</td>
+    <td class="td-store-state">${State}</td>
+    <td class="td-store-zipcode">${ZipCode}</td>
+    <td class="td-store-storetype">${StoreType}</td>
+    <td class="td-store-salesrep">${SalesPerson}</td>
+  </tr>
+</script>
+
+@section Scripts {
+  <script type="text/javascript">
+    $(document).ready(function () {      
+      pjs.storeListInit();
+    });
+    
+  </script>
+}

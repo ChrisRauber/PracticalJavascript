@@ -1,0 +1,64 @@
+﻿@model PracticalJavascript.Web.UI.Models.StoreViewModel
+@using PracticalJavascript.Web.UI.Helpers
+@{
+  ViewBag.Title = "Edit";
+}
+<h2>
+  Edit Store</h2>
+@using ( Html.BeginForm("Create", "Stores") )
+{ 
+  <div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.Name)
+      @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.AddressLine1)
+      @Html.TextBoxFor(m => m.AddressLine1)
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.AddressLine2)
+      @Html.TextBoxFor(m => m.AddressLine2)
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.City)
+      @Html.TextBoxFor(m => m.City)
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.State)
+      @Html.DropDownListFor(m => m.State, Html.OptionsForStates())
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.ZipCode)
+      @Html.TextBoxFor(m => m.ZipCode)
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.SalesPersonId)
+      @Html.TextBoxFor(m => m.SalesPersonId)
+      <a href="javascript:void(0);" onclick="javascript:pjs.searchSalesPerson();"><img src="@Url.Content("~/Content/images/search_16_h.png")" alt="Search" /></a>
+    </div>
+    <div class="entry-line">
+      @Html.LabelFor(m => m.SalesPerson)
+      <span id="SalesPerson"></span>
+    </div>
+    <div class="entry-line store-type">
+      @Html.LabelFor(m => m.StoreTypeId)
+      <input id="cboFuel" name="StoreTypeId" type="checkbox" name="cboFuelMaintenance" /><label
+        for="cboFuel" style="float: none;">Fuel</label>
+      <input id="cboMaintenance" name="StoreTypeId" type="checkbox" name="cboFuelMaintenance" /><label
+        for="cboMaintenance" style="float: none;">Maintenance</label>
+    </div>
+    <div class="entry-line">
+    </div>
+  </div>
+  <input type="submit" class="button" value="Save" />
+}
+@Html.Action("List", "SalesPersons")
+
+@section Scripts {
+  <script type="text/javascript">
+    $(document).ready(function () {
+      pjs.loadSalesPeople();
+    });
+  </script>
+}

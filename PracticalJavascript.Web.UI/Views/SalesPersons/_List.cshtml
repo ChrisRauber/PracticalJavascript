@@ -1,0 +1,38 @@
+﻿<div id="dlgSalesPeople" style="display: none;" class="dialog">
+  <input type="text" id="txtSearchSalesPerson" class="txt-search" />
+  <table>
+    <thead>
+      <tr>
+        <th class="td-sp-id">
+          ID
+        </th>
+        <th class="td-sp-name">
+          Name
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <div style="overflow: auto; height: 400px;">
+            <table style="margin: 0; padding 0;">
+              <tbody id="tbodySalesPeople">
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="float: right; margin-right: 20px;">
+    <input type="button" class="button" value="Close" onclick="javascript:pjs.closeSalesPeopleDialog();" />
+  </div>
+  <div class="clear">
+  </div>
+</div>
+<script id="salesPersonTemplate" type="text/x-jquery-tmpl">
+  <tr>
+    <td class="td-sp-id"><a href="javascript:void(0);" onclick="javascript:pjs.selectSelectPerson(${SalesPersonId});">${SalesPersonId}</a></td>
+    <td class="td-sp-name">${Name}</td>
+  </tr>
+</script>

@@ -1,0 +1,221 @@
+﻿body
+{
+  font-family: "Segoe UI" , "Lucida Sans Unicode" , "Lucida Grande" , Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #666;
+  margin: 0 0;
+  background: #d4e4ef; /* Old browsers */
+  background: -moz-linear-gradient(top, #c8d7eb 0%, #d4e4ef 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8d7eb), color-stop(100%,#d4e4ef)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #c8d7eb 0%,#d4e4ef 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #c8d7eb 0%,#d4e4ef 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #c8d7eb 0%,#d4e4ef 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8d7eb', endColorstr='#d4e4ef',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #c8d7eb 0%,#d4e4ef 100%); /* W3C */
+  background-repeat: no-repeat;
+  min-height: 800px;
+}
+strong, em, b, i
+{
+  font-family: "Segoe UI" , "Lucida Sans" , "Lucida Sans Unicode" , "Lucida Grande" , Verdana, Arial, Helvetica, sans-serif;
+}
+.page 
+{
+  margin-top: 20px;
+}
+#main 
+{
+  background-color: #fff;
+  padding: 30px 15px;
+}
+.borderradius #main 
+{
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.boxshadow .shadowbox
+{
+  box-shadow: #666666 4px 4px 4px;
+  -moz-box-shadow: #666666 4px 4px 4px;
+  -webkit-box-shadow: #666666 4px 4px 4px;
+}
+.no-boxshadow .shadowbox
+{
+  /* For IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  /* For IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+  zoom: 1;
+  border: 1px solid #999;
+}
+a.button
+{
+  float: left;
+  text-align: center;
+  text-decoration: none;
+}
+.button
+{
+  width: 100px;
+  padding: 3px 5px;
+  margin: 5px 5px;
+  color: #333;
+  background-color: #DBDBFF;
+  border: 1px solid #999;
+}
+.button:hover 
+{
+  background-color: #EFEDFC;
+}
+.borderradius .button 
+{
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+h2
+{
+  font-size: 130%;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+h5
+{
+  text-transform: uppercase;
+  font-size: 1.1em;
+  margin: 5px 5px;
+}
+ul li
+{
+  margin-left: 20px;
+}
+label
+{
+  float: left;
+  width: 125px;
+  padding: 5px;
+}
+input[type="text"]
+{
+  width: 175px;
+}
+textarea
+{
+  height: auto;
+}
+.center
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+img
+{
+  border: none;
+}
+hr
+{
+  color: #ddd;
+}
+#storeTypeSelector 
+{
+  float: right;
+}
+table  
+{
+  margin: 10px 5px;
+}
+thead tr 
+{
+  border: 1px solid #ccc;
+}
+thead tr th
+{
+  background-color: #666;
+  color: #fff;
+  padding: 3px 3px;
+}
+tbody tr 
+{
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+tbody tr td 
+{
+  padding: 3px 3px;
+}
+#tbodyStores tr td 
+{
+  text-align: center;
+}
+.td-store-id
+{
+  width: 80px;
+}
+.td-store-name
+{
+  width: 120px;
+}
+.td-store-address
+{
+  width: 200px;
+}
+.td-store-city
+{
+  width: 125px;
+}
+.td-store-state
+{
+  width: 60px;
+}
+.td-store-zipcode
+{
+  width: 60px;
+}
+.td-store-storetype
+{
+  width: 150px;
+}
+
+.td-store-salesrep
+{
+  width: 150px;
+}
+.entry-line
+{
+  clear: both;
+  margin: 10px 3px;
+}
+.dialog
+{
+  position: absolute;
+  padding: 10px 10px;
+  background-color: #fff;
+  border: 1px solid #999;
+  width: 450px;
+  text-align: center;
+}
+.boxshadow .dialog
+{
+  box-shadow: #666666 4px 4px 4px;
+  -moz-box-shadow: #666666 4px 4px 4px;
+  -webkit-box-shadow: #666666 4px 4px 4p;x;
+}
+.td-sp-id  
+{
+  width: 100px;
+}
+.td-sp-name
+{
+  width: 300px;
+}
+#txtSearchSalesPerson
+{
+  text-align: left;
+  width: 350px;
+  background-image: url('../../Content/images/search_16_h.png');
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
